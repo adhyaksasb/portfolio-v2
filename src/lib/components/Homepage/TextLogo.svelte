@@ -44,7 +44,7 @@
 				<span
 					role="button"
 					tabindex="0"
-					class="text-md font-bold md:text-2xl"
+					class="text-md font-bold lg:text-2xl"
 					onmouseenter={onMouseEnter}
 					onmouseleave={onMouseLeave}
 					aria-label={`Character ${char}`}>{char}</span

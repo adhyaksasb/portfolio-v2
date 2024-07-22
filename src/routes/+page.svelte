@@ -15,8 +15,6 @@
 	import SkillSet from '$lib/components/Homepage/SkillSet.svelte';
 	import TextLogo from '$lib/components/Homepage/TextLogo.svelte';
 
-	let logo = '/assets/logo-mini.svg';
-
 	$effect(() => {
 		document.title = 'Adhyaksa Setiabudi | adhyaksasb';
 
@@ -92,4 +90,4 @@
 	<TextLogo />
 	<SkillSet />
 </div>
-<!-- <PreLoading /> -->
+<PreLoading />

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 0 0% 3.9%;
+
+		--muted: 0 0% 78.1%;
+		--muted-foreground: 0 0% 45.1%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 0% 3.9%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 0 0% 3.9%;
+
+		--border: 0 0% 89.8%;
+		--input: 0 0% 89.8%;
+
+		--primary: 0 0% 9%;
+		--primary-foreground: 0 0% 98%;
+
+		--secondary: 0 0% 96.1%;
+		--secondary-foreground: 0 0% 9%;
+
+		--accent: 0 0% 96.1%;
+		--accent-foreground: 0 0% 9%;
+
+		--destructive: 0 72.2% 50.6%;
+		--destructive-foreground: 0 0% 98%;
+
+		--ring: 0 0% 3.9%;
+
+		--radius: 0.5rem;
+	}
+
+	.dark {
+		--background: 0 0% 3.9%;
+		--foreground: 0 0% 98%;
+
+		--muted: 0 0% 14.9%;
+		--muted-foreground: 0 0% 63.9%;
+
+		--popover: 0 0% 3.9%;
+		--popover-foreground: 0 0% 98%;
+
+		--card: 0 0% 3.9%;
+		--card-foreground: 0 0% 98%;
+
+		--border: 0 0% 14.9%;
+		--input: 0 0% 14.9%;
+
+		--primary: 0 0% 98%;
+		--primary-foreground: 0 0% 9%;
+
+		--secondary: 0 0% 14.9%;
+		--secondary-foreground: 0 0% 98%;
+
+		--accent: 0 0% 14.9%;
+		--accent-foreground: 0 0% 98%;
+
+		--destructive: 0 62.8% 30.6%;
+		--destructive-foreground: 0 0% 98%;
+
+		--ring: 0 0% 83.1%;
+	}
+}
+
+@layer base {
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+		@apply font-michroma;
+	}
+
+	@font-face {
+		font-family: 'Michroma';
+		font-style: normal;
+		font-weight: 400;
+		font-display: swap;
+		src: url(https://fonts.gstatic.com/s/michroma/v19/PN_zRfy9qWD8fEagAPgzpTnr_w.woff2)
+			format('woff2');
+		unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+			U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Michroma';
+	height: 100vh;
+}
+
+.home-container {
+	background-color: black;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.loading-page {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to right, #34065f, #2e0747, #0f2027);
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	align-items: center;
+	justify-content: center;
+	color: #191654;
+}
+
+#loading-svg {
+	height: 150px;
+	width: 150px;
+	stroke: white;
+	fill-opacity: 0;
+	stroke-width: 3px;
+	stroke-dasharray: 4500;
+	animation: draw 8s ease;
+}
+
+@keyframes draw {
+	0% {
+		stroke-dashoffset: 4500;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+.name-container {
+	height: 30px;
+	overflow: hidden;
+}
+
+.logo-name {
+	color: #fff;
+	font-size: 20px;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+	margin-left: 20px;
+	font-weight: bolder;
+}
+
+.text-container {
+	font-size: 24px;
+	display: inline-block;
+}
+.char {
+	display: inline-block;
+}

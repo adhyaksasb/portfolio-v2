@@ -9,10 +9,10 @@
 	const onMouseEnter = (event: Event) => {
 		const element = event.target;
 		gsap.to(element, {
-			x: getRandom(-20, 20),
-			y: getRandom(-20, 20),
+			x: getRandom(-30, 30),
+			y: getRandom(-30, 30),
 			rotation: getRandom(-30, 30),
-			scale: getRandom(0.8, 1.2),
+			scale: getRandom(0.8, 1.5),
 			duration: 0.3,
 			ease: 'power1.out'
 		});

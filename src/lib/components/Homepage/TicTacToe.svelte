@@ -26,6 +26,11 @@
 				return board[a];
 			}
 		}
+
+		if (board.every((cell) => cell !== null)) {
+			return 'draw'; // No winner and no empty spaces left
+		}
+
 		return null;
 	};
 
@@ -122,7 +127,9 @@
 			<div
 				class="absolute right-[95px] top-40 w-[200px] rounded-xl bg-background bg-opacity-80 p-3 text-center"
 			>
-				<p class="text-xl font-bold">{winner === player ? 'Player Wins!' : 'AI Wins!'}</p>
+				<p class="text-xl font-bold">
+					{winner === player ? 'Player Wins!' : winner === ai ? 'AI Wins!' : "It's a Draw!"}
+				</p>
 				<button class="rounded" onclick={startGame}>Play Again</button>
 			</div>
 		{/if}

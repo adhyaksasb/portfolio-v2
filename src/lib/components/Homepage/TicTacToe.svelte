@@ -120,7 +120,7 @@
 		</div>
 		{#if winner}
 			<div
-				class="absolute right-[95px] top-40 w-[200px] rounded-xl bg-black bg-opacity-80 p-3 text-center"
+				class="absolute right-[95px] top-40 w-[200px] rounded-xl bg-background bg-opacity-80 p-3 text-center"
 			>
 				<p class="text-xl font-bold">{winner === player ? 'Player Wins!' : 'AI Wins!'}</p>
 				<button class="rounded" onclick={startGame}>Play Again</button>

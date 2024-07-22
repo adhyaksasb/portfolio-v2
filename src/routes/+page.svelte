@@ -8,7 +8,7 @@
 	import MusicPlayer from '$lib/components/Homepage/MusicPlayer.svelte';
 	import PortfolioCard from '$lib/components/Homepage/PortfolioCard.svelte';
 	import GameplayCard from '$lib/components/Homepage/GameplayCard.svelte';
-	import GridEffects from '$lib/components/Homepage/GridEffects.svelte';
+	import TicTacToe from '$lib/components/Homepage/TicTacToe.svelte';
 	import CentralLogo from '$lib/components/Homepage/CentralLogo.svelte';
 	import ProfileCard from '$lib/components/Homepage/ProfileCard.svelte';
 	import TypeEffects from '$lib/components/Homepage/TypeEffects.svelte';
@@ -83,7 +83,7 @@
 	<MusicPlayer />
 	<PortfolioCard />
 	<GameplayCard />
-	<GridEffects />
+	<TicTacToe />
 	<CentralLogo />
 	<ProfileCard />
 	<TypeEffects />

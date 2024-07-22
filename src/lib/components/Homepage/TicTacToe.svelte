@@ -78,9 +78,7 @@
 			isPlayerTurn = false;
 
 			winner = checkWinner(board);
-			if (winner) {
-				isGameRun = false; // End the game when there's a winner
-			}
+
 			if (!winner) {
 				// Simulate AI thinking time
 				setTimeout(() => {
@@ -91,15 +89,10 @@
 							isPlayerTurn = true;
 						}
 						winner = checkWinner(board);
-						if (winner) {
-							isGameRun = false; // End the game when there's a winner
-						}
 					}
 				}, 100); // Adjust timeout as needed
 			}
 		}
-		console.log(winner);
-		console.log(isGameRun);
 	};
 
 	const startGame = () => {
@@ -125,11 +118,14 @@
 				</button>
 			{/each}
 		</div>
-	{:else if winner}
-		<div class="flex h-full flex-col items-center justify-center">
-			<p class="text-xl font-bold">{winner === player ? 'Player Wins!' : 'AI Wins!'}</p>
-			<button class="rounded px-4 py-2" onclick={startGame}>Play Again</button>
-		</div>
+		{#if winner}
+			<div
+				class="absolute right-[95px] top-40 w-[200px] rounded-xl bg-black bg-opacity-80 p-3 text-center"
+			>
+				<p class="text-xl font-bold">{winner === player ? 'Player Wins!' : 'AI Wins!'}</p>
+				<button class="rounded" onclick={startGame}>Play Again</button>
+			</div>
+		{/if}
 	{:else}
 		<div class="flex h-full items-center justify-center">
 			<button class="rounded px-4 py-2" onclick={startGame}>Play Tic Tac Toe</button>

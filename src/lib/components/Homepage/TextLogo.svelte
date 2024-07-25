@@ -3,8 +3,6 @@
 	import { getRandom } from '$lib/utils';
 
 	let characters = 'ADHYAKSASB'.split('');
-	let tempCharRefs: HTMLElement[] = [];
-	let charRefs: HTMLElement[] = [];
 
 	const onMouseEnter = (event: Event) => {
 		const element = event.target;
@@ -29,10 +27,6 @@
 			ease: 'power1.out'
 		});
 	};
-
-	$effect(() => {
-		charRefs = tempCharRefs;
-	});
 </script>
 
 <div

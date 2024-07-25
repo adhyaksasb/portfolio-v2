@@ -1,4 +1,7 @@
 <script lang="ts">
+	import { cn } from '$lib/utils';
+	import { Cross } from 'lucide-svelte';
+
 	type Board = (string | null)[];
 	let board: Board = $state(Array(9).fill(null));
 	let isPlayerTurn: boolean = $state(true);
@@ -26,6 +29,11 @@
 				return board[a];
 			}
 		}
+
+		if (board.every((cell) => cell !== null)) {
+			return 'draw'; // No winner and no empty spaces left
+		}
+
 		return null;
 	};
 
@@ -78,9 +86,6 @@
 			isPlayerTurn = false;
 
 			winner = checkWinner(board);
-			if (winner) {
-				isGameRun = false; // End the game when there's a winner
-			}
 			if (!winner) {
 				// Simulate AI thinking time
 				setTimeout(() => {
@@ -91,15 +96,10 @@
 							isPlayerTurn = true;
 						}
 						winner = checkWinner(board);
-						if (winner) {
-							isGameRun = false; // End the game when there's a winner
-						}
 					}
 				}, 100); // Adjust timeout as needed
 			}
 		}
-		console.log(winner);
-		console.log(isGameRun);
 	};
 
 	const startGame = () => {
@@ -108,28 +108,48 @@
 		winner = null;
 		isGameRun = true;
 	};
+	const resetGame = () => {
+		board = Array(9).fill(null);
+		isPlayerTurn = true;
+		winner = null;
+	};
 </script>
 
-<div class="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+<div class="flex min-h-[36rem] w-full flex-col items-center justify-center">
 	{#if isGameRun}
+		{#if winner}
+			<p class="mt-4 text-xl font-bold">
+				{winner === player ? 'Player Wins!' : winner === ai ? 'AI Wins!' : "It's a Draw!"}
+			</p>
+		{/if}
 		<div class="board">
 			{#each board as cell, index}
 				<button
 					type="button"
-					class="square bg-muted-foreground hover:bg-gray-200"
+					class={cn(
+						'square hover:bg-muted-foreground',
+						winner ? 'cursor-not-allowed bg-muted-foreground' : 'bg-muted'
+					)}
 					onclick={() => handleClick(index)}
 				>
 					{cell}
 				</button>
 			{/each}
 		</div>
-	{:else if winner}
-		<p class="mt-4 text-xl font-bold">{winner === player ? 'Player Wins!' : 'AI Wins!'}</p>
-		<button class="mt-4 rounded bg-blue-500 px-4 py-2 text-white" onclick={startGame}
-			>Play Game</button
-		>
+		{#if winner}
+			<button class="mt-2 rounded bg-blue-500 px-4 py-2 text-white" onclick={startGame}
+				>Play Again</button
+			>
+		{:else}
+			<button class="mt-4 rounded bg-blue-500 px-4 py-2 text-white" onclick={resetGame}
+				>Reset</button
+			>
+		{/if}
 	{:else}
-		<button class="mt-4 rounded bg-blue-500 px-4 py-2 text-white" onclick={startGame}
+		<Cross class="mb-6 h-40 w-40" />
+		<h1 class="mb-3 text-4xl font-bold">Tic Tac Toe</h1>
+		<p class="text-lg">Play the Ultimate Tic Tac Toe Showdown and takedown this powerful AI</p>
+		<button class="mt-6 rounded bg-blue-500 px-4 py-2 text-white" onclick={startGame}
 			>Play Game</button
 		>
 	{/if}
@@ -151,6 +171,5 @@
 		justify-content: center;
 		border: 2px solid #000;
 		font-size: 2rem;
-		cursor: pointer;
 	}
 </style>

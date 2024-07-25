@@ -58,3 +58,7 @@ export const flyAndScale = (
 export function getRandom(max: number, min: number) {
 	return Math.random() * (max - min) + min;
 }
+
+export function getRandomIndex<T>(array: T[]): number {
+	return Math.floor(Math.random() * array.length);
+}

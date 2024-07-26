@@ -5,9 +5,9 @@
 		href="https://adhyaksasb.netlify.app"
 		class="flex h-full w-full flex-col items-center justify-evenly overflow-hidden rounded-xl p-3 transition-all hover:scale-110 hover:bg-muted hover:shadow-2xl"
 	>
-		<h1 class="text-xl">Portfolio</h1>
+		<h1 class="text-lg md:text-xl">Portfolio</h1>
 		<p
-			class="text-2 mb-2 line-clamp-3 px-3 text-center font-light text-muted-foreground md:text-base"
+			class="text-md mb-2 line-clamp-3 px-3 text-center font-light text-muted-foreground md:text-base"
 		>
 			Check out more about me
 		</p>

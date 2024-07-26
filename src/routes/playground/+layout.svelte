@@ -16,7 +16,7 @@
 		<Header {path} />
 		<main class="flex min-w-[300px] flex-col items-center justify-center">
 			<div
-				class="mb-12 flex h-[36rem] w-full flex-col items-center justify-center gap-3 bg-muted/80"
+				class="mb-12 flex h-[36rem] w-full flex-col items-center justify-center gap-3 bg-muted/80 px-4 text-center"
 			>
 				{@render children()}
 			</div>

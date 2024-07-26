@@ -24,40 +24,40 @@
 			>Frameworks / Languages / Programs</span
 		>
 		<span title="HTML">
-			<Fa icon={faHtml5} class="text-lg md:text-2xl" />
+			<Fa icon={faHtml5} class="text-md md:text-2xl" />
 		</span>
 		<span title="CSS">
-			<Fa icon={faCss3} class="text-lg md:text-2xl" />
+			<Fa icon={faCss3} class="text-md md:text-2xl" />
 		</span>
 		<span title="Javascript">
-			<Fa icon={faJs} class="text-lg md:text-2xl" />
+			<Fa icon={faJs} class="text-md md:text-2xl" />
 		</span>
 		<span title="Java">
-			<Fa icon={faJava} class="text-lg md:text-2xl" />
+			<Fa icon={faJava} class="text-md md:text-2xl" />
 		</span>
 		<span title="PHP">
-			<Fa icon={faPhp} class="text-lg md:text-2xl" />
+			<Fa icon={faPhp} class="text-md md:text-2xl" />
 		</span>
 		<span title="Golang">
-			<Fa icon={faGolang} class="text-lg md:text-2xl" />
+			<Fa icon={faGolang} class="text-md md:text-2xl" />
 		</span>
 		<span title="Docker">
-			<Fa icon={faDocker} class="text-lg md:text-2xl" />
+			<Fa icon={faDocker} class="text-md md:text-2xl" />
 		</span>
 		<span title="Git">
-			<Fa icon={faGitAlt} class="text-lg md:text-2xl" />
+			<Fa icon={faGitAlt} class="text-md md:text-2xl" />
 		</span>
 		<span title="React">
-			<Fa icon={faReact} class="text-lg md:text-2xl" />
+			<Fa icon={faReact} class="text-md md:text-2xl" />
 		</span>
 		<span title="Vue">
-			<Fa icon={faVuejs} class="text-lg md:text-2xl" />
+			<Fa icon={faVuejs} class="text-md md:text-2xl" />
 		</span>
 		<span title="Laravel">
-			<Fa icon={faLaravel} class="text-lg md:text-2xl" />
+			<Fa icon={faLaravel} class="text-md md:text-2xl" />
 		</span>
 		<span title="AWS">
-			<Fa icon={faAws} class="text-lg md:text-2xl" />
+			<Fa icon={faAws} class="text-md md:text-2xl" />
 		</span>
 	</div>
 </div>

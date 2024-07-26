@@ -1,7 +1,7 @@
 <div class="loading-page">
 	<svg
 		id="loading-svg"
-		class="mb-8 md:mt-[77px]"
+		class="mb-9 md:mt-[77px]"
 		viewBox="0 0 206 174"
 		xmlns="http://www.w3.org/2000/svg"
 	>

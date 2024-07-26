@@ -58,28 +58,28 @@
 	<div class="flex flex-col items-center justify-center gap-10 md:w-96">
 		<div class="flex w-full justify-between">
 			<div class="flex gap-4">
-				<p class="text-lg text-muted-foreground">Lives |</p>
-				<p class="text-foreground">{lives}</p>
+				<p class="text-xl text-muted-foreground">Lives |</p>
+				<p class="text-xl text-foreground">{lives}</p>
 			</div>
 			<div class="flex gap-4">
-				<p class="text-lg text-muted-foreground">Scores |</p>
-				<p class="text-foreground">{scores}</p>
+				<p class="text-xl text-muted-foreground">Scores |</p>
+				<p class="text-xl text-foreground">{scores}</p>
 			</div>
 		</div>
-		<div class="flex items-center justify-center">
-			<h1 class="text-5xl font-bold">{word}</h1>
+		<div class="mb-6 flex items-center justify-center">
+			<h1 class="text-6xl font-bold">{word}</h1>
 		</div>
-		<div class="flex gap-8">
+		<div class="flex gap-14">
 			<button
 				type="button"
-				class="rounded-lg bg-blue-500 px-4 py-3 text-lg text-white"
+				class="rounded-lg bg-blue-500 px-5 py-4 text-lg text-white"
 				onclick={() => seenButton(word)}
 			>
 				Seen
 			</button>
 			<button
 				type="button"
-				class="rounded-lg bg-blue-500 px-4 py-3 text-lg text-white"
+				class="rounded-lg bg-blue-500 px-5 py-4 text-lg text-white"
 				onclick={() => newButton(word)}
 			>
 				New

@@ -8,6 +8,7 @@
 	let isGameWon: boolean = $state(false);
 	let showMessage: boolean = $state(false);
 	let message: string = $state('');
+	let isMobile: boolean = $state(false);
 
 	const hideMessage = () => {
 		showMessage = false;
@@ -81,6 +82,10 @@
 	};
 
 	const handleKeyDown = (index: number, event: KeyboardEvent) => {
+		if (isGameOver || isMobile) {
+			event.preventDefault();
+			return;
+		}
 		if (event.key === 'Backspace' && inputRow[index] === '' && index > 0) {
 			currentInputIndex = index - 1;
 			(
@@ -202,6 +207,7 @@
 	};
 
 	onMount(() => {
+		isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (typeof document !== 'undefined') {
 			refocus(new FocusEvent('focusout', { relatedTarget: null }));
 			document.addEventListener('focusout', refocus);

@@ -5755,7 +5755,8 @@ export const WORDS = [
 	'roble',
 	'rumba',
 	'biffy',
-	'pupal'
+	'pupal',
+	'gybes'
 ];
 export const WORD_LENGTH = 5;
 

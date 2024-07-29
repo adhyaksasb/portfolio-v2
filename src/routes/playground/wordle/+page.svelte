@@ -8,7 +8,6 @@
 	let isGameWon: boolean = $state(false);
 	let showMessage: boolean = $state(false);
 	let message: string = $state('');
-	let isMobile: boolean = $state(false);
 
 	const hideMessage = () => {
 		showMessage = false;
@@ -32,6 +31,8 @@
 			.map(() => Array(wordLength).fill('bg-muted'))
 	); // Colors for each row
 	let mergedInput: string = '';
+	// Maintain color mapping for virtual keyboard buttons
+	let keyColors: { [key: string]: string } = $state({});
 
 	const startGame = () => {
 		isGameRun = true;
@@ -47,6 +48,7 @@
 		colors = Array(maxAttempts)
 			.fill(null)
 			.map(() => Array(wordLength).fill('bg-muted'));
+		keyColors = {};
 		mergedInput = '';
 		tick().then(() => {
 			(
@@ -82,10 +84,6 @@
 	};
 
 	const handleKeyDown = (index: number, event: KeyboardEvent) => {
-		if (isGameOver || isMobile) {
-			event.preventDefault();
-			return;
-		}
 		if (event.key === 'Backspace' && inputRow[index] === '' && index > 0) {
 			currentInputIndex = index - 1;
 			(
@@ -190,6 +188,20 @@
 
 		// Update colors in the attempts array
 		colors = [...colors.slice(0, currentAttempt), newColors, ...colors.slice(currentAttempt + 1)];
+		// Update keyColors to reflect the color status of virtual keyboard buttons
+		for (let i = 0; i < wordLength; i++) {
+			let key = inputRow[i].toUpperCase();
+			if (key) {
+				if (newColors[i] === 'bg-green-500') {
+					keyColors[key] = 'bg-green-500';
+				} else if (newColors[i] === 'bg-yellow-500') {
+					keyColors[key] = 'bg-yellow-500';
+				} else {
+					keyColors[key] = 'bg-background bg-opacity-80';
+				}
+			}
+		}
+		console.log(keyColors);
 	};
 
 	const refocus = (event: FocusEvent) => {
@@ -207,7 +219,6 @@
 	};
 
 	onMount(() => {
-		isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 		if (typeof document !== 'undefined') {
 			refocus(new FocusEvent('focusout', { relatedTarget: null }));
 			document.addEventListener('focusout', refocus);
@@ -267,7 +278,7 @@
 			{/each}
 		</div>
 	{/each}
-	<VirtualKeyboard onKeyClick={handleVirtualKeyClick} />
+	<VirtualKeyboard onKeyClick={handleVirtualKeyClick} {keyColors} />
 {:else}
 	<Box class="mb-6 h-40 w-40" />
 	<h1 class="mb-3 text-4xl font-bold">Wordle</h1>

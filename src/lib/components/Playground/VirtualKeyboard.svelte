@@ -2,14 +2,19 @@
 	import { keyboardTopKeys, keyboardMiddleKeys, keyboardBottomKeys } from '$lib/data/playground';
 	import { CornerDownLeft, Delete } from 'lucide-svelte';
 
-	export let onKeyClick: (key: string) => void;
+	let {
+		onKeyClick,
+		keyColors
+	}: { onKeyClick: (key: string) => void; keyColors: { [key: string]: string } } = $props();
+
+	console.log(keyColors);
 </script>
 
 <div class="grid w-screen grid-cols-10 gap-1 md:w-[32rem] md:gap-1.5">
 	{#each keyboardTopKeys as key}
 		<button
 			type="button"
-			class="rounded-md border bg-muted p-2 text-xs md:text-lg"
+			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-muted'}`}
 			onclick={() => onKeyClick(key)}>{key}</button
 		>
 	{/each}
@@ -18,7 +23,7 @@
 	{#each keyboardMiddleKeys as key}
 		<button
 			type="button"
-			class="rounded-md border bg-muted p-2 text-xs md:text-lg"
+			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-muted'}`}
 			onclick={() => onKeyClick(key)}>{key}</button
 		>
 	{/each}
@@ -34,7 +39,7 @@
 	{#each keyboardBottomKeys as key}
 		<button
 			type="button"
-			class="w-full rounded-md border bg-muted p-2 text-xs md:text-lg"
+			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-muted'}`}
 			onclick={() => onKeyClick(key)}>{key}</button
 		>
 	{/each}

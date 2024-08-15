@@ -89,4 +89,4 @@
 	<TextLogo />
 	<SkillSet />
 </div>
-<!-- <PreLoading /> -->
+<PreLoading />

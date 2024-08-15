@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="col-span-6 row-span-4 overflow-hidden rounded-xl bg-muted/40 p-4 shadow-lg md:col-span-4 md:row-span-4 lg:col-span-3 lg:row-span-4"
+	class="col-span-6 row-span-4 overflow-hidden rounded-xl bg-accent/80 p-4 shadow-md md:col-span-4 md:row-span-4 lg:col-span-3 lg:row-span-4"
 >
 	<div class="mb-4 flex gap-2">
 		<img

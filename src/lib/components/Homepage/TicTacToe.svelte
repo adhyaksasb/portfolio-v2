@@ -109,7 +109,7 @@
 </script>
 
 <div
-	class="hidden overflow-hidden rounded-xl bg-muted/40 shadow-lg dark:border-none lg:col-span-3 lg:row-span-6 lg:block"
+	class="hidden overflow-hidden rounded-xl bg-accent/80 shadow-md dark:border-none lg:col-span-3 lg:row-span-6 lg:block"
 >
 	{#if isGameRun}
 		<div class="board p-2">

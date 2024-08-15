@@ -32,7 +32,7 @@
 </script>
 
 <div
-	class="col-span-5 row-span-3 row-start-4 min-h-20 overflow-hidden rounded-xl bg-muted/40 md:col-span-4 md:row-span-2 md:row-start-auto lg:col-span-3 lg:row-span-2"
+	class="col-span-5 row-span-3 row-start-4 min-h-20 overflow-hidden rounded-xl bg-accent/80 md:col-span-4 md:row-span-2 md:row-start-auto lg:col-span-3 lg:row-span-2"
 >
 	<div class="flex h-full items-center justify-center text-sm md:text-lg">
 		<p>I'm a&nbsp;</p>

@@ -146,7 +146,7 @@
 			>
 		{/if}
 	{:else}
-		<Cross class="mb-6 h-40 w-40" />
+		<Cross class="mb-6 h-44 w-44" />
 		<h1 class="mb-3 text-4xl font-bold">Tic Tac Toe</h1>
 		<p class="text-lg">Play the Ultimate Tic Tac Toe Showdown and takedown this powerful AI</p>
 		<button class="mt-6 rounded bg-blue-500 px-4 py-2 text-white" onclick={startGame}

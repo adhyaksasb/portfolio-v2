@@ -5,7 +5,7 @@
 </script>
 
 <div
-	class="col-span-1 row-span-3 flex flex-col items-center justify-evenly rounded-xl bg-muted/40 shadow-lg md:row-span-4 lg:row-span-5"
+	class="col-span-1 row-span-3 flex flex-col items-center justify-evenly rounded-xl bg-accent/80 shadow-md md:row-span-4 lg:row-span-5"
 >
 	<a href="https://github.com/adhyaksasb" class="flex items-center justify-center"
 		><Fa icon={faGithub} class="text-2xl hover:scale-110 md:text-5xl" /></a

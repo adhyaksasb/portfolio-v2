@@ -12,7 +12,7 @@
 </script>
 
 <div
-	class="col-span-2 col-start-6 row-span-3 row-start-4 rounded-xl bg-muted/40 md:col-span-3 md:col-start-auto md:row-span-4 md:row-start-auto md:block lg:col-span-2 lg:row-span-5 lg:block"
+	class="col-span-2 col-start-6 row-span-3 row-start-4 rounded-xl bg-accent/80 shadow-md md:col-span-3 md:col-start-auto md:row-span-4 md:row-start-auto md:block lg:col-span-2 lg:row-span-5 lg:block"
 >
 	<div class="flex h-full flex-col items-center justify-center lg:justify-normal">
 		<div

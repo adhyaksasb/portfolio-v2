@@ -10,7 +10,7 @@
 	console.log(keyColors);
 </script>
 
-<div class="grid w-screen grid-cols-10 gap-1 md:w-[32rem] md:gap-1.5">
+<div class="mt-3 grid w-screen grid-cols-10 gap-1 md:w-[34rem] md:gap-1.5">
 	{#each keyboardTopKeys as key}
 		<button
 			type="button"
@@ -19,7 +19,7 @@
 		>
 	{/each}
 </div>
-<div class="grid w-screen grid-cols-9 gap-1 md:w-[32rem] md:gap-1.5">
+<div class="grid w-screen grid-cols-9 gap-1 md:w-[34rem] md:gap-1.5">
 	{#each keyboardMiddleKeys as key}
 		<button
 			type="button"
@@ -28,7 +28,7 @@
 		>
 	{/each}
 </div>
-<div class="grid w-screen grid-cols-9 gap-1 md:w-[32rem] md:grid-cols-11 md:gap-1.5">
+<div class="grid w-screen grid-cols-9 gap-1 md:w-[34rem] md:grid-cols-11 md:gap-1.5">
 	<button
 		type="button"
 		class="col-span-1 flex items-center justify-center rounded-md border bg-muted p-2 text-xs md:col-span-2 md:text-lg"

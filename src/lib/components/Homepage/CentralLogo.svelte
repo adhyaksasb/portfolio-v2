@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="col-span-7 row-span-2 row-start-7 overflow-hidden rounded-xl bg-muted/40 shadow-lg md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3"
+	class="col-span-7 row-span-2 row-start-7 overflow-hidden rounded-xl bg-accent/80 shadow-md md:col-span-6 md:row-span-2 lg:col-span-4 lg:row-span-3"
 >
 	<div class="flex h-full items-center justify-center">
 		<img

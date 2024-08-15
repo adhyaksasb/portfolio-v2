@@ -146,7 +146,7 @@
 		} else if (key === 'Enter') {
 			handleKeyDown(currentInputIndex, new KeyboardEvent('keydown', { key: 'Enter' }));
 		} else {
-			if (currentInputIndex < wordLength) {
+			if (currentInputIndex < wordLength && !attempts[currentAttempt][currentInputIndex]) {
 				inputRow[currentInputIndex] = key;
 				attempts[currentAttempt][currentInputIndex] = key;
 				(
@@ -272,7 +272,7 @@
 					bind:value={attempts[attempt][index]}
 					oninput={(event) => handleInput(index, event)}
 					onkeydown={(event) => handleKeyDown(index, event)}
-					class={`h-12 w-12 rounded-md border border-gray-300 text-center ${colors[attempt][index]} uppercase caret-transparent focus:outline-none`}
+					class={`h-14 w-14 rounded-md border border-gray-300 text-center ${colors[attempt][index]} uppercase caret-transparent focus:outline-none`}
 					disabled={isGameOver && attempt >= currentAttempt}
 				/>
 			{/each}
@@ -280,7 +280,7 @@
 	{/each}
 	<VirtualKeyboard onKeyClick={handleVirtualKeyClick} {keyColors} />
 {:else}
-	<Box class="mb-6 h-40 w-40" />
+	<Box class="mb-6 h-44 w-44" />
 	<h1 class="mb-3 text-4xl font-bold">Wordle</h1>
 	<p class="text-lg">Try guess the hidden word</p>
 	<button class="mt-6 rounded bg-blue-500 px-4 py-2 text-white" onclick={startGame}

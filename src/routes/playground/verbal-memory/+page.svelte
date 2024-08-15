@@ -55,7 +55,7 @@
 </script>
 
 {#if isGameRun}
-	<div class="flex flex-col items-center justify-center gap-10 md:w-96">
+	<div class="flex w-full flex-col items-center justify-center gap-10 px-4 md:w-96">
 		<div class="flex w-full justify-between">
 			<div class="flex gap-4">
 				<p class="text-xl text-muted-foreground">Lives |</p>
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 		<div class="mb-6 flex items-center justify-center">
-			<h1 class="text-6xl font-bold">{word}</h1>
+			<h1 class="text-4xl font-bold md:text-6xl">{word}</h1>
 		</div>
 		<div class="flex gap-14">
 			<button
@@ -87,7 +87,7 @@
 		</div>
 	</div>
 {:else if isGameOver}
-	<BookA class="mb-6 h-40 w-40" />
+	<BookA class="mb-6 h-44 w-44" />
 	<h1 class="mb-3 text-4xl font-bold">Verbal Memory</h1>
 	<p class="text-lg">
 		You've remembered <span class="text-2xl font-bold">{memoryWords.length} words</span> and you've

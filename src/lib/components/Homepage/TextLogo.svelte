@@ -30,7 +30,7 @@
 </script>
 
 <div
-	class="row-span-4 rounded-xl bg-muted/40 shadow-lg md:col-span-2 md:row-span-2 lg:col-span-4 lg:row-span-2"
+	class="row-span-4 rounded-xl bg-accent/80 shadow-md md:col-span-2 md:row-span-2 lg:col-span-4 lg:row-span-2"
 >
 	<div class="flex h-full items-center justify-center p-4 text-center">
 		<div class="flex shrink flex-col md:flex-row">

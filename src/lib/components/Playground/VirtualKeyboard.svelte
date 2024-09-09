@@ -14,7 +14,7 @@
 	{#each keyboardTopKeys as key}
 		<button
 			type="button"
-			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-muted'}`}
+			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-gray-900/40'}`}
 			onclick={() => onKeyClick(key)}>{key}</button
 		>
 	{/each}
@@ -23,7 +23,7 @@
 	{#each keyboardMiddleKeys as key}
 		<button
 			type="button"
-			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-muted'}`}
+			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-gray-900/40'}`}
 			onclick={() => onKeyClick(key)}>{key}</button
 		>
 	{/each}
@@ -31,7 +31,7 @@
 <div class="grid w-screen grid-cols-9 gap-1 md:w-[34rem] md:grid-cols-11 md:gap-1.5">
 	<button
 		type="button"
-		class="col-span-1 flex items-center justify-center rounded-md border bg-muted p-2 text-xs md:col-span-2 md:text-lg"
+		class="col-span-1 flex items-center justify-center rounded-md border bg-gray-900/40 p-2 text-xs md:col-span-2 md:text-lg"
 		onclick={() => onKeyClick('Backspace')}
 	>
 		<Delete class="h-4 w-4 md:h-7 md:w-7" />
@@ -39,13 +39,13 @@
 	{#each keyboardBottomKeys as key}
 		<button
 			type="button"
-			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-muted'}`}
+			class={`rounded-md border p-2 text-xs md:text-lg ${keyColors[key] || 'bg-gray-900/40'}`}
 			onclick={() => onKeyClick(key)}>{key}</button
 		>
 	{/each}
 	<button
 		type="button"
-		class="col-span-1 flex items-center justify-center rounded-md border bg-muted p-2 text-xs md:col-span-2 md:text-lg"
+		class="col-span-1 flex items-center justify-center rounded-md border bg-gray-900/40 p-2 text-xs md:col-span-2 md:text-lg"
 		onclick={() => onKeyClick('Enter')}
 	>
 		<CornerDownLeft class="h-4 w-4 md:h-7 md:w-7" />

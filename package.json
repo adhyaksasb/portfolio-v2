@@ -37,6 +37,7 @@
 	"dependencies": {
 		"@fortawesome/free-brands-svg-icons": "^6.5.2",
 		"@fortawesome/free-solid-svg-icons": "^6.5.2",
+		"@vercel/analytics": "^2.0.1",
 		"bits-ui": "^0.21.12",
 		"clsx": "^2.1.1",
 		"gsap": "^3.12.5",
